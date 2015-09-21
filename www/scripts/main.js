@@ -52,6 +52,7 @@ function init() {
     materials[i] = new THREE.PointsMaterial( { size: size, map: sprite, transparent: true } );
     particles = new THREE.Points( geometry, materials[i] );
 
+    console.log(particles);
     particles.rotation.x = Math.random() * 6;
     particles.rotation.y = Math.random() * 6;
     particles.rotation.z = Math.random() * 6;
@@ -153,9 +154,11 @@ function render() {
     var object = scene.children[ i ];
 
     if ( object instanceof THREE.Points ) {
-
-      // object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
-
+      // var pCount = 200;
+      // for (var i = 0; i < pCount; i++) {
+      //   var particle = object.geometry.vertices[i];
+      //   particle.y -= Math.random() * 100;
+      // }
     }
 
   }
