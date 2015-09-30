@@ -29,6 +29,6 @@ io.sockets.on('connection', function (socket) {
 
 function sendBookText() {
   var word = bookText[currentWord];
-  io.emit('book-text', word);
+  // io.emit('book-text', word);
   currentWord++;
 }
